@@ -51,8 +51,8 @@ palindrome (word)
 ```
 ### Explicación:
 - Se definio la funcion "palindrome" en donde se toma como parametro la variable "word", que corresponde a la palabra que el usuario ingresa por teclado. En esta funcion se desea verificar si la palabra escrita en sentido contrario sigue siendo ella misma, como por ejemplo : rallar.
-- Se crea la cadena vacia "reversed_word", a la que se le ira sumando ella misma y la letra correspondiente:
-- 
+- Se crea la cadena vacia "reversed_word", a la que se le ira sumando ella misma y la todas las letras dentro de "word":
+  
 reversed_word = r + reversed_word
 reversed_word= a + r + reversed_word
 reversed_word= l + a + r + reversed_word
@@ -62,7 +62,7 @@ reversed_word= r + a + l + l + a + r + reversed_word
 
 - si "reversed_word" es igual a "word", la palabra es un palindromo, en cualquier caso contrario, no lo es.
 
-### Punto 3:
+## Punto 3:
 Escribir una función que reciba una lista de números y devuelva solo aquellos que son primos. La función debe recibir una lista de enteros y retornar solo aquellos que sean primos.
 ```
 def prime_number(numbers_list):
@@ -83,7 +83,13 @@ if __name__ == "__main__":
         numbers_list.append(int(input("*")))
     print(f"Los numeros primos de la lista que acaba de ingresar son: {prime_number(numbers_list)}")
 ```
-### Punto 4:
+### Explicación: 
+-Se definio la función "prime_number", la cual toma como parametro a "numbers_list" siendo este una lista de numeros que el usuario ingresa por teclado.
+- Se crea la lista vacia "primes_list" en la cual se iran guardando solo los numeros primos de la lista "numbers_list".
+- Para verificar que elementos de "numbers_list" son numeros primos, por cada numero en esta lista se crea la lista vacia "divisors" en la cual se guardaran los numeros en el rango de entre 1 y el numero que se esta evaluando menos 1 ("number" - 1), que al dividir este ultimo ("number") su residuo sea igual a cero.
+- Si la lista divisors de cierto numero tiene un solo elemento (que deberia ser el numero 1) entonces este numero se guardara en la lista de numeros primos, que es lo que retornara la función.
+- 
+## Punto 4:
 Escribir una función que reciba una lista de números enteros y retorne la mayor suma entre dos elementos consecutivos.
 ```
 def max_sum (numbers_list):
