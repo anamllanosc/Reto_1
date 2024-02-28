@@ -50,15 +50,15 @@ word=str(input("¿Qué palabra desea que se verifique?"))
 palindrome (word)
 ```
 ### Explicación:
-- Se definio la funcion "palindrome" en donde se toma como parametro la variable "word", que corresponde a la palabra que el usuario ingresa por teclado. En esta funcion se desea verificar si la palabra escrita en sentido contrario sigue siendo ella misma, como por ejemplo : rallar.
+- Se definió la funcion "palindrome" en donde se toma como parametro la variable "word", que corresponde a la palabra que el usuario ingresa por teclado. En esta funcion se desea verificar si la palabra escrita en sentido contrario sigue siendo ella misma, como por ejemplo : rallar.
 - Se crea la cadena vacia "reversed_word", a la que se le ira sumando ella misma y la todas las letras dentro de "word":
--  
-reversed_word = r + reversed_word
-reversed_word= a + r + reversed_word
-reversed_word= l + a + r + reversed_word
-reversed_word= l + l + a + r + reversed_word
-reversed_word= a + l + l + a + r + reversed_word
-reversed_word= r + a + l + l + a + r + reversed_word
+ 
+-reversed_word = r + reversed_word
+-reversed_word= a + r + reversed_word
+-reversed_word= l + a + r + reversed_word
+-reversed_word= l + l + a + r + reversed_word
+-reversed_word= a + l + l + a + r + reversed_word
+-reversed_word= r + a + l + l + a + r + reversed_word
 
 - si "reversed_word" es igual a "word", la palabra es un palindromo, en cualquier caso contrario, no lo es.
 
@@ -84,7 +84,7 @@ if __name__ == "__main__":
     print(f"Los numeros primos de la lista que acaba de ingresar son: {prime_number(numbers_list)}")
 ```
 ### Explicación: 
--Se definio la función "prime_number", la cual toma como parametro a "numbers_list" siendo este una lista de numeros que el usuario ingresa por teclado.
+-Se definió la función "prime_number", la cual toma como parametro a "numbers_list" siendo este una lista de numeros que el usuario ingresa por teclado.
 - Se crea la lista vacia "primes_list" en la cual se iran guardando solo los numeros primos de la lista "numbers_list".
 - Para verificar que elementos de "numbers_list" son numeros primos, por cada numero en esta lista se crea la lista vacia "divisors" en la cual se guardaran los numeros en el rango de entre 1 y el numero que se esta evaluando menos 1 ("number" - 1), que al dividir este ultimo ("number") su residuo sea igual a cero.
 - Si la lista divisors de cierto numero tiene un solo elemento (que deberia ser el numero 1) entonces este numero se guardara en la lista de numeros primos, que es lo que retornara la función.
@@ -106,7 +106,6 @@ def max_sum (numbers_list):
 
     return maxi_sum
 
-
 if __name__ == "__main__":      
     n=int(input("Ingrese el numero de elementos que tendra la lista: "))
     numbers_list=[]
@@ -116,7 +115,13 @@ if __name__ == "__main__":
 
     print (f"La mayor suma de elementos consecutivos es: {max_sum(numbers_list)}")
 ```
-### Punto 5:
+### Explicación: 
+- Se definió la función "max_sum" que toma como parametro a "numbers_list", una lista ingresada por el usuario por teclado de la que se desea saber cual es la mayor suma de dos numeros consecutivos.
+- Se crea la variable "maxi_sum" que es igual a cero y ademas, a la cual se le sumara la mayor suma de dos consecutivos encontrada en la lista. Para verificar esto se crea un ciclo for para verificar los elementos de la lista con posicion en el rango de 0 hasta n-1 (siendo n la cantidad de elementos que el usuario desea agregar a la lista).
+- Por cada posición, se suma el numero a la que le corresponde esta posicion con el numero de la pocición inmediatamente siguiente. El resultado de esta suma se le asigna a la variable "actual_sum", para ser comparada posteriormente en con la variable "maxi_sum", en donde, si "actual_sum">"maxi_sum", "maxi_sum" ahora tendra el valor de "actual_sum".
+- La funcion retornara el valor de "maxi_sum" luego de haber iterado por todas las posiciones de la lista.
+
+## Punto 5:
 Escribir una función que reciba una lista de string y retorne unicamente aquellos elementos que tengan los mismos caracteres. e.g. entrada: ["amor", "roma", "perro"], salida ["amor", "roma"]
 ```
 def same_characters(words_list):
