@@ -17,14 +17,16 @@ def basic_operations (x:int, y:int, z:str):
         else:
             print ("NO SE PUEDE DIVIDIR ENTRE 0")
     else: print ("EL OPERANDO NO ES VALIDO")
+    
         
 x=int(input("Ingrese el primer operando:"))
 y=int(input("Ingrese el segundo operando:"))
 z=str(input("¿Qué operación desea realizar?(+),(-),(*),(/):"))  
-print (basic_operations('x', 'y', 'z'))
 
+print (basic_operations('x', 'y', 'z'))
 ```
-### Punto 2:
+### Explicación:
+## Punto 2:
 Realice una función que permita validar si una palabra es un palíndromo. Condición: No se vale hacer slicing para invertir la palabra y verificar que sea igual a la original
 ```
 def palindrome (word: str):
