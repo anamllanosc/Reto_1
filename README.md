@@ -52,7 +52,7 @@ palindrome (word)
 ### Explicación:
 - Se definio la funcion "palindrome" en donde se toma como parametro la variable "word", que corresponde a la palabra que el usuario ingresa por teclado. En esta funcion se desea verificar si la palabra escrita en sentido contrario sigue siendo ella misma, como por ejemplo : rallar.
 - Se crea la cadena vacia "reversed_word", a la que se le ira sumando ella misma y la todas las letras dentro de "word":
-  
+-  
 reversed_word = r + reversed_word
 reversed_word= a + r + reversed_word
 reversed_word= l + a + r + reversed_word
