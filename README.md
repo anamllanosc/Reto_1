@@ -1,9 +1,9 @@
 # Reto_1
-### Punto 1:
+## Punto 1:
 Crear una función que realice operaciones básicas (suma, resta, multiplicación, división) entre dos números, según la elección del usuario, la forma de entrada de la función será los dos operandos y el caracter usado para la operación. entrada: (1,2,"+"), salida (3).
 
 ```
-def basic_operations (x:int, y:int, z:str): #annas
+def basic_operations (x:int, y:int, z:str):
 
     if z == "+":
         return (x+y)
