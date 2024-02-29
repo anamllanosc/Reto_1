@@ -117,7 +117,7 @@ if __name__ == "__main__":
 ```
 ### Explicación: 
 - Se definió la función "max_sum" que toma como parametro a "numbers_list", una lista ingresada por el usuario por teclado de la que se desea saber cual es la mayor suma de dos numeros consecutivos.
-- Se crea la variable "maxi_sum" que es igual a cero y ademas, a la cual se le sumara la mayor suma de dos consecutivos encontrada en la lista. Para verificar esto se crea un ciclo for para verificar los elementos de la lista con posicion en el rango de 0 hasta n-1 (siendo n la cantidad de elementos que el usuario desea agregar a la lista).
+- Se crea la variable "maxi_sum" que es igual a cero y ademas, a la cual se le ira asignando la mayor suma encontrada de dos consecutivos en la lista. Para verificar esto se crea un ciclo for para verificar los elementos de la lista con posicion en el rango de 0 hasta n-1 (siendo n la cantidad de elementos que el usuario desea agregar a la lista).
 - Por cada posición, se suma el numero a la que le corresponde esta posicion con el numero de la pocición inmediatamente siguiente. El resultado de esta suma se le asigna a la variable "actual_sum", para ser comparada posteriormente en con la variable "maxi_sum", en donde, si "actual_sum">"maxi_sum", "maxi_sum" ahora tendra el valor de "actual_sum".
 - La funcion retornara el valor de "maxi_sum" luego de haber iterado por todas las posiciones de la lista.
 
@@ -147,7 +147,14 @@ def same_characters(words_list):
 if __name__ == "__main__":
     words_list=[]
     n=int(input("Ingrese la cantidad de elementos de la lista:"))
+    print(f"Ingrese las {n} palabras a comparar")
     for i in range (n):
         words_list.append(str(input("*")))
     print(f"Los elementos con los mismos caracteres son: {same_characters(words_list)}")
 ```
+### Explicación: 
+- Se definió la función "same_characters" que toma como parametro a "words_list", una lista de palabras (strings) que el usuario ingresa por teclado.
+- Se crea la lista vacia "same_char_list" en la que se guardaran todas las parabras que compartan los mismos caracteres.
+- Para verificar que dos palabras de la lista contengan los mismos caracteres, se crea un for anidado a otro para confirmar que cada una de las palabras sea comparada con todas las restantes en la lista sin importar si son consecutivas o no.
+- Se crean las variables "first_chars" y "second_chars", a las cuales se les asiganara una palabra or cada na de las iteraciones de los ciclos for, estas palabras se ordenan con el metodo "sorted()" y posteriormente se comparan.
+- Si ambas en su forma ordenada son exactamente iguales, quiere decir que las palabras originales sin ordenar contienen los mismos caracteres.Las palabras que cumplen estas condiciones son las que se guardan en "same_char_list", que es lo que retornara la función.
